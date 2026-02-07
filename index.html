@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Check</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name...">
+                <button id="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </div>
+            <div id="error-message" class="error hidden"></div>
+        </header>
+
+        <main id="weather-container" class="hidden">
+            <div class="current-weather">
+                <div class="weather-icon-wrapper">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+                <div class="weather-info">
+                    <h2 id="city-name">--</h2>
+                    <p id="temperature">--°C</p>
+                    <p id="description">--</p>
+                </div>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="label">Humidity</span>
+                    <span class="value" id="humidity">--%</span>
+                </div>
+                <div class="detail-card">
+                    <span class="label">Wind Speed</span>
+                    <span class="value" id="wind-speed">-- km/h</span>
+                </div>
+            </div>
+        </main>
+        
+        <div id="loading" class="loading hidden">Loading...</div>
+    </div>
+</body>
+</html>
